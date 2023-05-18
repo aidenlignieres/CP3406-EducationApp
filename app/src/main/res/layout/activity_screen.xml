@@ -1,35 +1,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/activityTitle"
+        android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activityImage"
         android:text="Activity Title"
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
-        android:padding="16dp"
-        tools:ignore="UnknownId" />
+        android:padding="16dp" />
 
-    <Button
-        android:id="@+id/startButton"
+    <TextView
+        android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/activityTitle"
-        android:layout_centerHorizontal="true"
-        android:text="Start Activity"/>
+        android:text="Score: 0"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="16dp"
+        android:layout_below="@id/titleTextView" />
 
     <Button
         android:id="@+id/quitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/startButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Quit Activity"/>
+        android:text="Quit"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:layout_below="@id/titleTextView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scoreTextView"
+        android:layout_above="@id/quitButton">
+
+        <LinearLayout
+            android:id="@+id/questionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Dynamic question and answer options -->
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

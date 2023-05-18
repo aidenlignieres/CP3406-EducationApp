@@ -3,53 +3,40 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Activity Title"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:textAlignment="center"
-        android:padding="16dp" />
-
-    <TextView
-        android:id="@+id/scoreTextView"
+        android:id="@+id/welcomeMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: 0"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:padding="16dp"
-        android:layout_below="@id/titleTextView" />
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to the Education App!"
+        android:textSize="24sp" />
 
     <Button
-        android:id="@+id/quitButton"
+        android:id="@+id/mathButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quit"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        android:layout_below="@id/titleTextView" />
+        android:layout_below="@id/welcomeMessage"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Math" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/scoreTextView"
-        android:layout_above="@id/quitButton">
+    <Button
+        android:id="@+id/scienceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mathButton"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Science" />
 
-        <LinearLayout
-            android:id="@+id/questionLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Dynamic question and answer options -->
-
-        </LinearLayout>
-
-    </ScrollView>
+    <Button
+        android:id="@+id/readingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scienceButton"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Reading" />
 
 </RelativeLayout>
