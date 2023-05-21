@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -7,7 +8,7 @@
         android:id="@+id/userStatsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Statistics"
+        android:text="@string/user_statistics"
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
@@ -22,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Score: "
+            android:text="@string/total_score"
             android:textSize="18sp"
             android:textColor="@android:color/black" />
 
@@ -30,10 +31,10 @@
             android:id="@+id/totalScoreTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/total_score_value"
             android:textSize="18sp"
             android:textColor="@android:color/black"
-            android:layout_marginLeft="16dp" />
+            android:layout_marginStart="16dp" />
 
     </LinearLayout>
 
@@ -46,7 +47,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Average Response Time: "
+            android:text="@string/average_response_time"
             android:textSize="18sp"
             android:textColor="@android:color/black" />
 
@@ -54,17 +55,17 @@
             android:id="@+id/averageResponseTimeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/average_response_time_value"
             android:textSize="18sp"
             android:textColor="@android:color/black"
-            android:layout_marginLeft="16dp" />
+            android:layout_marginStart="16dp" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Top Scores"
+        android:text="@string/top_scores"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:padding="16dp" />
@@ -83,7 +84,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Previous 5 Scores"
+        android:text="@string/previous_5_scores"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:padding="16dp" />
@@ -103,7 +104,8 @@
         android:id="@+id/shareButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Share"
-        android:layout_margin="16dp" />
+        android:text="@string/share"
+        android:layout_margin="16dp"
+        tools:ignore="VisualLintButtonSize" />
 
 </LinearLayout>

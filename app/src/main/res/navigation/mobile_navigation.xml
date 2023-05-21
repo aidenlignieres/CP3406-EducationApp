@@ -9,21 +9,16 @@
         android:id="@+id/navigation_home"
         android:name="com.example.mindboost.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/landing_page" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_Settings"
         android:name="com.example.mindboost.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/settings_screen" />
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.mindboost.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/statistics_screen" />
-    <fragment
-        android:id="@+id/navigation_notifications2"
         android:name="com.example.mindboost.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/statistics_screen" />
