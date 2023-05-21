@@ -3,4 +3,22 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="user_statistics">User Statistics</string>
+    <string name="total_score">Total Score:</string>
+    <string name="total_score_value">0</string>
+    <string name="average_response_time">Average Response Time:</string>
+    <string name="average_response_time_value">0</string>
+    <string name="share">Share</string>
+    <string name="previous_5_scores">Previous 5 Scores</string>
+    <string name="top_scores">Top Scores</string>
+    <string name="subject_title">Activity Title</string>
+    <string name="current_score">Score:</string>
+    <string name="current_score_value">0</string>
+    <string name="quit">Quit</string>
+    <string name="settings">Settings</string>
+    <string name="sound">Sound:</string>
+    <string name="difficulty">Difficulty:</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
 </resources>
