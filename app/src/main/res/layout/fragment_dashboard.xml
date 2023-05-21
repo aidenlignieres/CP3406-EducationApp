@@ -8,7 +8,7 @@
         android:id="@+id/settingsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Settings"
+        android:text="@string/settings"
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sound: "
+            android:text="@string/sound"
             android:textSize="18sp"
             android:textColor="@android:color/black"/>
 
@@ -31,7 +31,7 @@
             android:id="@+id/soundSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:minWidth="48dp"
             android:minHeight="48dp"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -47,7 +47,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Difficulty: "
+            android:text="@string/difficulty"
             android:textSize="18sp"
             android:textColor="@android:color/black"/>
 
@@ -56,26 +56,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="16dp">
+            android:layout_marginStart="16dp">
 
             <RadioButton
                 android:id="@+id/easyRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Easy"
+                android:text="@string/easy"
                 android:checked="true"/>
 
             <RadioButton
                 android:id="@+id/mediumRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Medium"/>
+                android:text="@string/medium"/>
 
             <RadioButton
                 android:id="@+id/hardRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hard"/>
+                android:text="@string/hard"/>
 
         </RadioGroup>
 
