@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="Welcome to the Education App!"
+        android:text="@string/welcome_to_the_education_app"
         android:textSize="24sp" />
 
     <Button
@@ -18,7 +18,7 @@
         android:layout_below="@id/welcomeMessage"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:text="Math" />
+        android:text="@string/subject_1" />
 
     <Button
         android:id="@+id/scienceButton"
@@ -27,7 +27,7 @@
         android:layout_below="@id/mathButton"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Science" />
+        android:text="@string/subject_2" />
 
     <Button
         android:id="@+id/readingButton"
@@ -36,6 +36,6 @@
         android:layout_below="@id/scienceButton"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Reading" />
+        android:text="@string/subject_3" />
 
 </RelativeLayout>
