@@ -21,4 +21,8 @@
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
+    <string name="welcome_to_the_education_app">Welcome to the Education App!</string>
+    <string name="subject_1">Math</string>
+    <string name="subject_2">Science</string>
+    <string name="subject_3">Reading</string>
 </resources>
