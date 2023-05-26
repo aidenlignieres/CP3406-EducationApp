@@ -53,15 +53,35 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/scoreTextView"
-        android:layout_above="@id/quitButton">
+        android:layout_below="@id/scoreTextView">
 
         <LinearLayout
-            android:id="@+id/questionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/questionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:padding="16dp" />
+
+            <LinearLayout
+                android:id="@+id/optionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <!-- Add your options dynamically here -->
+
+            </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
 
