@@ -1,15 +1,15 @@
 package com.example.mindboost
 
-import java.time.LocalDateTime
+import java.util.*
 
-data class Score(val subject: String, val score: Int, val dateTime: LocalDateTime)
+data class Score(val subject: String, val score: Int, val dateTime: Date)
 
 object Scores {
     private const val MAX_TOP_SCORES = 5
     private val topScores: MutableList<Score> = mutableListOf()
     private val allAttempts: MutableList<Score> = mutableListOf()
 
-    fun addScore(subject: String, score: Int, dateTime: LocalDateTime) {
+    fun addScore(subject: String, score: Int, dateTime: Date) {
         val newScore = Score(subject, score, dateTime)
         allAttempts.add(newScore)
 
