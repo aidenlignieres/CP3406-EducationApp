@@ -1,5 +1,7 @@
 package com.example.mindboost
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -19,6 +21,7 @@ class QuestionActivity : AppCompatActivity() {
     private var score: Int = 0
 
     private lateinit var subject: String
+    private lateinit var difficulty: String
     private lateinit var dateTime: Date
 
     private lateinit var questionTextView: TextView
@@ -26,17 +29,23 @@ class QuestionActivity : AppCompatActivity() {
 
     private lateinit var scoreTextView: TextView
 
+    private lateinit var sharedPreferences: SharedPreferences
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.event_screen)
 
+        sharedPreferences = getSharedPreferences("com.example.mindboost", Context.MODE_PRIVATE)
+        Scores.initialize(this)
+
         // Retrieve the subject from the intent
         subject = intent.getStringExtra("subject") ?: ""
+        difficulty = intent.getStringExtra("difficulty") ?: ""
         println(subject)
 
         // Retrieve the first question for the subject
-        currentQuestion = subject.let { QuestionBank.getQuestionBySubject(it) }
+        currentQuestion = subject.let { QuestionBank.getQuestionBySubjectAndDifficulty(it, difficulty) }
 
         questionTextView = findViewById(R.id.questionTextView)
         optionContainer = findViewById(R.id.optionContainer)
@@ -147,7 +156,7 @@ class QuestionActivity : AppCompatActivity() {
     private fun getNextQuestion() {
         // Retrieve the next question for the subject
         val subject = currentQuestion?.subject
-        currentQuestion = subject?.let { QuestionBank.getQuestionBySubject(it) }
+        currentQuestion = subject?.let { QuestionBank.getQuestionBySubjectAndDifficulty(it, difficulty) }
 
         if (currentQuestion != null) {
             displayQuestion(currentQuestion!!)
@@ -165,7 +174,7 @@ class QuestionActivity : AppCompatActivity() {
 
         // Handle the score data according to your requirements
         // You can save it locally, display it to the user, etc.
-        Scores.addScore(subject, score, dateTime)
+        Scores.addScore(subject, difficulty, score, dateTime)
 
         // Reset the score to 0
         score = 0
