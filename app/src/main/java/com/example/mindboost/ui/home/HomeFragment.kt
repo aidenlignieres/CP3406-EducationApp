@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.mindboost.QuestionActivity
 import com.example.mindboost.databinding.FragmentHomeBinding
+import com.example.mindboost.ui.dashboard.DashboardFragment
 
 class HomeFragment : Fragment() {
 
@@ -63,10 +64,13 @@ class HomeFragment : Fragment() {
 
     // Activity starter
     private fun startQuestionActivity(subject: String) {
+        val dashboardFragment =
+            parentFragmentManager.findFragmentByTag("dashboardFragment") as? DashboardFragment
+        val difficulty = dashboardFragment?.getSelectedDifficulty() ?: ""
+
         val intent = Intent(requireActivity(), QuestionActivity::class.java)
         intent.putExtra("subject", subject)
-        // println(subject)
-        // println(intent)
+        intent.putExtra("difficulty", difficulty)
         startActivity(intent)
     }
 
