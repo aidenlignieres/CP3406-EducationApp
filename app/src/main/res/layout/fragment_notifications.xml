@@ -12,7 +12,8 @@
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:layout_marginTop="90dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -102,7 +103,7 @@
 
     <Button
         android:id="@+id/shareButton"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/share"
         android:layout_margin="16dp"

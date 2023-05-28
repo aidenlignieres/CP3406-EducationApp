@@ -12,7 +12,8 @@
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:layout_marginTop="90dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
