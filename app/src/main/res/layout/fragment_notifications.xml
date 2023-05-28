@@ -5,18 +5,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="90dp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/userStatsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/user_statistics"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
-            android:textAlignment="center"
             android:padding="16dp"
-            android:layout_marginTop="90dp"/>
+            android:text="@string/user_statistics"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,11 +84,11 @@
         <LinearLayout
             android:id="@+id/topScoresLayout"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <!-- Add TextViews dynamically for top scores -->
 
@@ -106,24 +107,28 @@
         <LinearLayout
             android:id="@+id/previousScoresLayout"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <!-- Add TextViews dynamically for previous scores -->
+            <!-- Add TextViews dynamically for previous scores -->
 
         </LinearLayout>
 
         <Button
-        android:id="@+id/shareButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="center"
-        android:text="@string/share" />
+            android:id="@+id/shareButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:text="@string/share" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/transparent" />
     </LinearLayout>
 
 </ScrollView>
