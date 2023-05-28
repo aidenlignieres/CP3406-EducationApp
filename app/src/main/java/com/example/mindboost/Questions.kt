@@ -9,7 +9,8 @@ data class Question(
 )
 
 object QuestionBank {
-    private val allQuestions: List<Question> = listOf(
+    private val easyQuestions: List<Question> = listOf(
+        // Easy questions
         Question(
             1,
             "Math",
@@ -29,7 +30,7 @@ object QuestionBank {
             "Math",
             "19 + ……. = 42",
             listOf("23", "61", "0", "42"),
-            1
+            0
         ),
         Question(
             4,
@@ -64,7 +65,7 @@ object QuestionBank {
             "Reading",
             "What’s the name of the spiky-headed Sith Lord holding a cool double-blade lightsaber?",
             listOf("Darth Vader", "Darth Maul", "Darth Paul", "Darth Garth"),
-            0
+            1
         ),
         Question(
             9,
@@ -76,10 +77,24 @@ object QuestionBank {
         // Add more questions for different subjects
     )
 
+    private val mediumQuestions: List<Question> = listOf(
+        // Medium questions
+    )
+
+    private val hardQuestions: List<Question> = listOf(
+        // Hard questions
+    )
+
     private val usedQuestions: MutableSet<Int> = mutableSetOf()
 
-    fun getQuestionBySubject(subject: String): Question? {
-        val questions = allQuestions.filter { it.subject == subject && it.id !in usedQuestions }
+    fun getQuestionBySubjectAndDifficulty(subject: String, difficulty: String): Question? {
+        val questions = when (difficulty) {
+            "Easy" -> easyQuestions.filter { it.subject == subject && it.id !in usedQuestions }
+            "Medium" -> mediumQuestions.filter { it.subject == subject && it.id !in usedQuestions }
+            "Hard" -> hardQuestions.filter { it.subject == subject && it.id !in usedQuestions }
+            else -> easyQuestions.filter { it.subject == subject && it.id !in usedQuestions } // Default to Easy questions if difficulty is unknown
+        }
+
         return if (questions.isEmpty()) {
             null
         } else {
